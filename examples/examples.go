@@ -8,7 +8,7 @@ const Json2 = `{
 }`
 const JsonStr_1 = `
 {
-"age": 30.0,
+"age": 30.00,
 "name": "Alice",
 "address": {
 "city": "Wonderland",
@@ -20,7 +20,7 @@ const JsonStr_1 = `
 const JsonStr_2 = `
 {
 "name": "Alice",
-"age": 30,
+"age": 30.0,
 "address": {
 "city": "Wonderland"
 },

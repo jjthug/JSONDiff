@@ -129,17 +129,23 @@ func TestCompareJSON(t *testing.T) {
 			},
 		},
 		{
-			name: "Complex Changes",
+			name: "Complex Changes with different order and different data types",
 			json1: `{
 				"key1": {
+					"subkey2": [1, 2],
 					"subkey1": "value1",
-					"subkey2": [1, 2]
+					"fine":34.0,
+					"numbers":45.0002,
+					"money": 125.00
 				},
 				"key2": "value2"
 			}`,
 			json2: `{
 				"key1": {
 					"subkey1": "value2",
+					"money": 125.0,
+					"fine":34,
+					"numbers":45,
 					"subkey2": [1, 3]
 				},
 				"key3": "value3"
@@ -159,6 +165,10 @@ func TestCompareJSON(t *testing.T) {
 					"key1.subkey2[1]": {
 						OldValue: float64(2),
 						NewValue: float64(3),
+					},
+					"key1.numbers": {
+						OldValue: float64(45.0002),
+						NewValue: float64(45),
 					},
 				},
 			},
