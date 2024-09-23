@@ -18,8 +18,8 @@ func main() {
 		levelSet[level] = struct{}{}
 	}
 
-	json1, err1 := diff.ParseJSON(examples.JsonStr_1)
-	json2, err2 := diff.ParseJSON(examples.JsonStr_2)
+	json1, err1 := diff.ParseJSON(examples.JsonStr1)
+	json2, err2 := diff.ParseJSON(examples.JsonStr2)
 
 	if err1 != nil || err2 != nil {
 		fmt.Println("Error parsing JSON:", err1, err2)

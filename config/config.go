@@ -1,3 +1,3 @@
 package config
 
-var LEVELS = []int{1, 2}
+var LEVELS = []int{}
